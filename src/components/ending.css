@@ -1,0 +1,16 @@
+.ending-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 80vw;
+    padding-bottom: 20px;
+}
+
+.button-container > button {
+    background-color: rgb(51,51,51);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}

@@ -1,0 +1,15 @@
+.highscore {
+    display: grid;
+    grid-template-columns: repeat(3, 33%); 
+    gap: 3px;
+}
+
+.blink {
+    animation: blink-animation 0.8s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}

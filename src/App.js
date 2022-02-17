@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Quiz from './components/quiz';
+import Landing from './components/landing';
+import { useSelector } from "react-redux";
 
 function App() {
+  const username = useSelector((state) => state.user);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Chart Quiz</h1>
+      <div className="content">
+        {!username && <Landing></Landing>}
+        { username && <Quiz></Quiz>}
+      </div>
     </div>
   );
 }
